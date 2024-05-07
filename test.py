@@ -7,13 +7,6 @@ import time
 
 model = YOLO('240_yolov8n_full_integer_quant_edgetpu.tflite')
 
-def RGB(event, x, y, flags, param):
-    if event == cv2.EVENT_MOUSEMOVE:
-        colorsBGR = [x, y]
-        print(colorsBGR)
-
-cv2.namedWindow('RGB')
-cv2.setMouseCallback('RGB', RGB)
 
 cap = cv2.VideoCapture(0)
 
@@ -56,7 +49,7 @@ while True:
     # Display FPS on frame
     cvzone.putTextRect(frame, f'FPS: {round(fps, 2)}', (10, 30), 1,1)
 
-    cv2.imshow("RGB", frame)
+    cv2.imshow("FRAME", frame)
 
     if cv2.waitKey(1) & 0xFF == 27:
         break
