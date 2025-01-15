@@ -22,10 +22,7 @@ exec "$SHELL"
 
 1)python3 -m venv .venv
 source .venv/bin/activate
-pip install numpy==1.26.4
-
-2)pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2   ------this new step for latest raspberry pi bookworm update so please run this command before (pip install edge-tpu-silva) command
-
+2)pip install numpy==1.26.4
 3)pip install edge-tpu-silva
 
 4)silvatpu-linux-setup
